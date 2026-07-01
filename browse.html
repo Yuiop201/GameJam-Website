@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Projects | Markus GameJams</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Markus GameJams</a>
+      <nav class="nav-links">
+        <a href="index.html">Overview</a>
+        <a href="browse.html">Browse Projects</a>
+        <a id="nav-account-link" href="account.html">My Account</a>
+        <a id="nav-login-link" href="login.html">Login</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-header">
+        <div>
+          <p class="eyebrow">Library</p>
+          <h1>Browse uploaded games, code, and animations</h1>
+        </div>
+        <a class="btn btn-primary" href="account.html">Submit something new</a>
+      </section>
+
+      <section id="project-list" class="project-grid"></section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

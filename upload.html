@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload | Markus GameJams</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Markus GameJams</a>
+      <nav class="nav-links">
+        <a href="index.html">Overview</a>
+        <a href="browse.html">Browse Projects</a>
+        <a id="nav-account-link" href="account.html">My Account</a>
+        <a id="nav-login-link" href="login.html">Login</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main class="page-shell auth-shell">
+      <section class="card auth-card">
+        <h1>Upload your project</h1>
+        <p class="muted">Share a game, animation, or code experiment with the community.</p>
+        <form id="upload-form" class="stacked-form">
+          <input type="text" id="title" placeholder="Project title" required />
+          <select id="type">
+            <option value="game">Game</option>
+            <option value="animation">Animation</option>
+            <option value="mc-plugin">Minecraft plugin</option>
+          </select>
+          <textarea id="description" placeholder="Describe your project" rows="4" required></textarea>
+          <input type="file" id="upload-file" accept=".zip,.jar,.png,.jpg,.jpeg,.gif,.mp4,.webm,.txt,.json,.md,.cs,.java,.js,.ts,.py,.html,.css" />
+          <p class="muted">Upload a file such as a game build, animation asset, or plugin archive.</p>
+          <input type="text" id="link" placeholder="Demo link (optional)" />
+          <button class="btn btn-primary" type="submit">Save to the gallery</button>
+        </form>
+        <p id="upload-status" class="status-text"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
