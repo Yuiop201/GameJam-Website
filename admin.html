@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Markus GameJams</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Markus GameJams</a>
+      <nav class="nav-links">
+        <a href="index.html">Overview</a>
+        <a href="browse.html">Browse Projects</a>
+        <a id="nav-account-link" href="account.html">My Account</a>
+        <a id="nav-login-link" href="login.html">Login</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-header">
+        <div>
+          <p class="eyebrow">Moderation</p>
+          <h1>Administrator dashboard</h1>
+        </div>
+      </section>
+
+      <section class="card admin-panel">
+        <h2>Admin access</h2>
+        <form id="admin-login-form" class="stacked-form">
+          <input type="email" id="admin-email" placeholder="Admin email" required />
+          <input type="password" id="admin-password" placeholder="Admin password" required />
+          <button class="btn btn-primary" type="submit">Enter admin panel</button>
+        </form>
+        <p id="admin-status" class="status-text"></p>
+      </section>
+
+      <section id="admin-dashboard" class="hidden">
+        <div class="card">
+          <h2>All submissions</h2>
+          <div id="admin-projects"></div>
+        </div>
+        <div class="card">
+          <h2>Registered users</h2>
+          <div id="admin-users"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

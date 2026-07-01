@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account | Markus GameJams</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Markus GameJams</a>
+      <nav class="nav-links">
+        <a href="index.html">Overview</a>
+        <a href="browse.html">Browse Projects</a>
+        <a id="nav-account-link" href="account.html">My Account</a>
+        <a id="nav-login-link" href="login.html">Login</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-header">
+        <div>
+          <p class="eyebrow">Personal dashboard</p>
+          <h1 id="account-heading">Your dashboard</h1>
+        </div>
+        <button id="logout-btn" class="btn btn-secondary hidden">Logout</button>
+      </section>
+
+      <section id="account-login-prompt" class="card">
+        <h2>Login required</h2>
+        <p class="muted">Sign in to view your projects, upload new work, and manage your submissions.</p>
+        <a class="btn btn-primary" href="login.html">Go to login</a>
+      </section>
+
+      <section id="account-dashboard" class="hidden">
+        <div class="card">
+          <h2>Welcome, <span id="account-name"></span></h2>
+          <p class="muted">Manage your uploaded games, animations, and Minecraft plugin files here.</p>
+        </div>
+
+        <div class="card">
+          <h2>Upload a project</h2>
+          <form id="account-upload-form" class="stacked-form">
+            <input type="text" id="account-title" placeholder="Project title" required />
+            <select id="account-type">
+              <option value="game">Game</option>
+              <option value="animation">Animation</option>
+              <option value="mc-plugin">Minecraft plugin</option>
+            </select>
+            <textarea id="account-description" placeholder="Describe your project" rows="4" required></textarea>
+            <input type="file" id="account-upload-file" accept=".zip,.jar,.png,.jpg,.jpeg,.gif,.mp4,.webm,.txt,.json,.md,.cs,.java,.js,.ts,.py,.html,.css" />
+            <input type="text" id="account-link" placeholder="Demo link (optional)" />
+            <button class="btn btn-primary" type="submit">Upload project</button>
+          </form>
+          <p id="account-upload-status" class="status-text"></p>
+        </div>
+
+        <div class="card">
+          <h2>Your projects</h2>
+          <div id="account-projects"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
